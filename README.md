@@ -1,18 +1,16 @@
 # mmpbsa_from_openmm
-example demonstrating a free energy estimation starting from OpenFoceField-parameterized ligands and OpenMM-derived
+example demonstrating a free energy estimate starting from OpenFoceField-parameterized ligands and using an OpenMM-derived
 trajectory. 
 
 # file prep:
 see files in `openmm_simulation` dir.
 
-- [x] process PDB (1XEP - catechol bound to T4 lysozyme) file with openmm-setup
+- [x] process the PDB file with openmm-setup (1XEP - catechol bound to T4 lysozyme)
 - [x] in `align_ligand.ipynb`, generate an RDKit `mol` object that is aligned
 with the crystal structure ligand
 - [x] in `parameterize_ligand.ipynb`, use OpenForceField to parameterize this `mol`
-object - also save a drug prmtop for later analysis.
-- [x] in `combine_systems.ipynb`, add the parameterized ligand to the system and save.
-- [x] in 'save_protein_and_complex_prmtop`, individually save prmtop files for the
-complex, and for the receptor alone (for MMPBSA analysis).
+object 
+- [x] in `combine_systems.ipynb`, add the parameterized ligand to the system and save a copy as `*.parm7`
 
 
 You now have a `.parm7` file called `complex_plus_water.parm7`. There will also be `complex_system.xml`,
@@ -21,12 +19,12 @@ Thus we have the building blocks for an MMPBSA in CaFE in VMD.
 
 # generate a trajectory
 
-- [x] in the top directory, see `generate_trajectory.ipynb` to generate a trajectory using OpenMM
+- [x] in the topmost directory, see `generate_trajectory.ipynb` to generate a 5ns trajectory using OpenMM
 
 # analyse
 
 - [x] run VMD script (`vmd -dispdev text < analyse.tcl > out.log`), having installed APBS, NAMD2
-and CaFE plugin.
+and CaFE plugin (~40mins)
 
 # results
 
