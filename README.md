@@ -28,6 +28,27 @@ Thus we have the building blocks for an MMPBSA in CaFE in VMD.
 - [x] run VMD script (`vmd -dispdev text < analyse.tcl > out.log`), having installed APBS, NAMD2
 and CaFE plugin.
 
+# results
+
+[!result](./ic50_estimate.png)
+
+The free energy estimate was -6.1105 kcal/mol with SD 2.5155. By my calculations that's an IC50
+of around 50 micromolar. The errorbars are unequal because I am assuming the error is normally
+distributed around the mean affinity value, which gets distorted when exponentiated to get IC50. This is
+at least an order of magnitude off, if you consider catechol is has low millimolar or high micromolar
+binding affinity (see Mobley, Chodera, Dill 10.1063/1.2221683).
+
+Crystal structures of catechol bound to T4 lysozyme show two possible binding modes, so correctly
+sampling these might improve the calculation (https://doi.org/10.1021/jm0491187). Also, I assumed 250 statistically
+independent samples. It may be safer to do some block averaging here, or increase the time between
+samples (i.e. the DCD stride), since 20ps between samples
+doesn't sound like enough to decorrelate. Ultimately though MMPBSA is an approximate method so we don't expect
+to be super close.
+
+Assuming a true 1uM binding affinity, current estimate is about 1.8kcal/mol too high. 
+
+
+
 # tidbits
 
 - CaFE can be installed by cloning the CaFE repo at https://github.com/HuiLiuCode/CaFE_Plugin,
