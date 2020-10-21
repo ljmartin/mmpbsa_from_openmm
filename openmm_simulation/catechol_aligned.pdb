@@ -1,14 +1,23 @@
-HETATM    1  C1  UNL     1      25.690   5.892   5.279  1.00  0.00           C  
-HETATM    2  C2  UNL     1      25.846   5.213   4.105  1.00  0.00           C  
-HETATM    3  C3  UNL     1      26.709   5.690   3.156  1.00  0.00           C  
-HETATM    4  C4  UNL     1      27.422   6.856   3.383  1.00  0.00           C  
-HETATM    5  C5  UNL     1      27.255   7.525   4.564  1.00  0.00           C  
-HETATM    6  C6  UNL     1      26.395   7.048   5.509  1.00  0.00           C  
-HETATM    7  O1  UNL     1      27.970   8.676   4.768  1.00  0.00           O  
-HETATM    8  O2  UNL     1      28.286   7.302   2.391  1.00  0.00           O  
-CONECT    1    2    2    6
-CONECT    2    3
-CONECT    3    4    4
+HETATM    1  C1  UNL     1      25.849   5.224   4.112  1.00  0.00           C  
+HETATM    2  C2  UNL     1      25.658   5.873   5.314  1.00  0.00           C  
+HETATM    3  C3  UNL     1      26.393   7.039   5.502  1.00  0.00           C  
+HETATM    4  C4  UNL     1      27.264   7.528   4.552  1.00  0.00           C  
+HETATM    5  C5  UNL     1      27.433   6.857   3.363  1.00  0.00           C  
+HETATM    6  C6  UNL     1      26.715   5.691   3.145  1.00  0.00           C  
+HETATM    7  O1  UNL     1      28.287   7.301   2.387  1.00  0.00           O  
+HETATM    8  O2  UNL     1      27.974   8.691   4.781  1.00  0.00           O  
+HETATM    9  H1  UNL     1      25.298   4.313   3.925  1.00  0.00           H  
+HETATM   10  H2  UNL     1      24.984   5.525   6.087  1.00  0.00           H  
+HETATM   11  H3  UNL     1      26.265   7.575   6.439  1.00  0.00           H  
+HETATM   12  H4  UNL     1      26.846   5.156   2.203  1.00  0.00           H  
+HETATM   13  H5  UNL     1      28.840   8.142   2.481  1.00  0.00           H  
+HETATM   14  H6  UNL     1      27.854   9.185   5.649  1.00  0.00           H  
+CONECT    1    2    2    6    9
+CONECT    2    3   10
+CONECT    3    4    4   11
 CONECT    4    5    8
 CONECT    5    6    6    7
+CONECT    6   12
+CONECT    7   13
+CONECT    8   14
 END
