@@ -30,7 +30,7 @@ and CaFE plugin.
 
 # results
 
-[!result](./ic50_estimate.png)
+![result](./ic50_estimate.png)
 
 The free energy estimate was -6.1105 kcal/mol with SD 2.5155. By my calculations that's an IC50
 of around 50 micromolar. The errorbars are unequal because I am assuming the error is normally
