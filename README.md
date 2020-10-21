@@ -15,7 +15,7 @@ object
 
 You now have a `.parm7` file called `complex_plus_water.parm7`. There will also be `complex_system.xml`,
 which is an openmm `System` object that can be fed into a `Simulation` to make a trajectory.
-Thus we have the building blocks for an MMPBSA in CaFE in VMD.
+Thus we have the building blocks for an MMPBSA run using CaFE in VMD/NAMD2.
 
 # generate a trajectory
 
@@ -42,7 +42,7 @@ independent samples and only sampled for a small time (5ns). It may be safer to 
 here, or increase the time between
 samples (i.e. the DCD stride), since 20ps between samples
 doesn't sound like enough to decorrelate. Ultimately, though, MMPBSA is an approximate method so we don't expect
-to be super close to the absolute values, but is still useful for relative affinity calculations (not shown here).
+to be super close to the absolute values. Instead, it is more applicable to relative affinity calculations (not shown here).
 
 Assuming a true 1uM binding affinity, current estimate is about 1.8kcal/mol too high. 
 
