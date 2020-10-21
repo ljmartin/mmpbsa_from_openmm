@@ -20,3 +20,7 @@ for an MMPBSA calculation using either MMPBSA.py from the AMBER toolkit, or CaFE
 
 # generate a trajectory
 
+in the top directory, see `generate_trajectory.ipynb` to generate a trajectory using OpenMM
+
+# analyse
+
