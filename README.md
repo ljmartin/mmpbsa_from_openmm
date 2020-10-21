@@ -2,7 +2,7 @@
 example demonstrating a free energy estimation starting from OFF and OpenMM
 
 # file prep:
-see in `openmm_simulation` dir.
+see files in `openmm_simulation` dir.
 
 - [x] process PDB (1XEP - catechol bound to T4 lysozyme) file with openmm-setup
 - [x] in `align_ligand.ipynb`, generate an RDKit `mol` object that is aligned
@@ -14,13 +14,14 @@ object - also save a drug prmtop for later analysis.
 complex, and for the receptor alone (for MMPBSA analysis).
 
 
-You know have `drug.prmtop`, `receptor.prmtop`, and `complex.prmtop`. There will also be `complex_system.xml`,
+You now have `drug.prmtop`, `receptor.prmtop`, and `complex.prmtop`. There will also be `complex_system.xml`,
 which is an openmm `System` object that can be run to make a trajectory. Thus we have the building blocks
 for an MMPBSA calculation using either MMPBSA.py from the AMBER toolkit, or CaFE in VMD.
 
 # generate a trajectory
 
-in the top directory, see `generate_trajectory.ipynb` to generate a trajectory using OpenMM
+- [x] in the top directory, see `generate_trajectory.ipynb` to generate a trajectory using OpenMM
 
 # analyse
 
+- [ ] run VMD script, having installed APBS and CaFE plugin. 
